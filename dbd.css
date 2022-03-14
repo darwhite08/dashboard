@@ -1,0 +1,48 @@
+.dbd-split1 {
+    position: fixed;
+    top: 9vh;
+    left: 0;
+}
+
+.dbd-split2 {
+    margin-left: 26vw;
+}
+
+.dbd-nb {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.dbd-container {
+    background-color: aliceblue;
+}
+
+.dbdsp1-user {
+    padding-left: 8vw;
+    padding-bottom: 1vh;
+    padding-top: 2vh;
+    border-bottom: 4px solid rgb(255, 255, 255);
+    width: 100%;
+    background-color: rgb(31, 27, 27);
+}
+
+.dbdsp1-user img {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+.dbdsp1-user span {
+    font-weight: bold;
+    margin-left: -1.5vw;
+    margin-top: -2vh;
+    display: block;
+    color: white;
+}
+
+.dbdsp1-nav {
+    background-color: rgb(79, 39, 189);
+    height: 100%;
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://kit.fontawesome.com/879ed49c00.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./dbd.css">
+    <script src="./dbd.js"></script>
+    <title>dashboard</title>
+</head>
+
+<body onload="Excute_onload()">
+    <!-- 
+        dbd-fr: Dashboard-First-Row;
+         dbd-sr: Dashboard-Second-Row;
+         dbdsr-fg: First Graph;
+         dbdsr-sg: Second Graph;
+     -->
+    <!-- Navigation -->
+
+    <header class="dbd-nb text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <svg class="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
+         <path></path>
+      </svg>
+                <span class="ml-3 text-xl">Flipwave</span>
+            </a>
+            <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-white">First Link</a>
+                <a class="mr-5 hover:text-white">Second Link</a>
+                <a class="mr-5 hover:text-white">Third Link</a>
+                <a class="mr-5 hover:text-white">Fourth Link</a>
+            </nav>
+            <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Logout
+      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+        <path d="M5 12h14M12 5l7 7-7 7"></path>
+      </svg>
+    </button>
+        </div>
+    </header>
+
+    <div class="dbd-container w3-row">
+
+        <!-- Dashboard Sidebar -->
+
+        <div class="dbd-split1 w3-col l3 w3-block w3-white" style="height: 100vh; ">
+            <div class="dbdsp1-user">
+                <img src="https://picsum.photos/200/300" alt=""><br>
+                <span>Sunil Sharma</span>
+            </div>
+            <div class="dbdsp1-nav w3-padding">
+                <span class="w3-text-grey">Navigations</span>
+                <div>
+                    <ul class="w3-margin-top w3-text-white">
+                        <li class="">Dashboard</li>
+                    </ul>
+                </div>
+                <div class="w3-text-white">
+                    <span>Interface</span>
+                    <ul class="w3-text-white">
+                        <span>Components</span>
+                        <li>link 1</li>
+                        <li>link 1</li>
+                    </ul>
+                    <ul class="w3-text-white">
+                        <span>Components</span>
+                        <li>link 1</li>
+                        <li>link 1</li>
+                    </ul>
+                </div>
+
+                <div class="dbd-charts w3-text-white">
+                    <span>Charts</span>
+                    <ul>
+                        <span>3d pi</span>
+                        <li>link 1</li>
+                        <li>link 1</li>
+                        <li>link 1</li>
+                        <li>link 1</li>
+                    </ul>
+                    <ul>
+                        <span>Doughnut</span>
+                        <li>link 1</li>
+                        <li>link 1</li>
+                        <li>link 1</li>
+                        <li>link 1</li>
+
+                    </ul>
+                </div>
+                <div class="dbd-others w3-margin-top">
+                    <button class="w3-button w3-text-black w3-white w3-round w3-medium">Back to home</button>
+                    <button class="w3-button w3-text-black w3-white w3-round w3-medium">Settings</button>
+                    <button class="w3-button w3-text-black w3-white w3-round w3-medium">logout</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Dashboard split 2 -->
+        <div class="dbd-split2 w3-col l9 ">
+            <div class="dbd-header">
+                <div class="w3-row w3-display-container w3-padding-48 w3-block">
+                    <div class="w3-col l10 w3-display-left w3-margin-left">
+                        <span>DashBoard</span>
+                    </div>
+                    <div class="w3-col l2 w3-display-right">
+                        <button class="w3-button w3-blue w3-hover-blue w3-text-white w3-round">Generate Report</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- First Row -->
+
+            <div class="dbr-fr w3-row w3-margin-bottom w3-padding-16">
+                <div class="w3-col l6">
+                    <div class="w3-row ">
+
+                        <!-- First Card -->
+
+                        <div class="w3-col l6 w3-white w3-card w3-padding w3-margin-left w3-padding-16 w3-round" style="width: 42%;">
+                            <div class="w3-display-container ">
+                                <span>Customers</span>
+                                <i class="fa-solid w3-round fa-user w3-display-topright w3-pale-blue w3-text-blue w3-padding"></i>
+                            </div>
+                            <div>
+                                <span class="w3-xlarge w3-text-grey">3666</span>
+                            </div>
+                            <div>
+                                <br><span><i class="fa-solid w3-round fa-up-long w3-text-light-green">&nbsp;10%</i></span><br>
+                                <span>Since last month</span>
+                            </div>
+                        </div>
+
+                        <!-- Second Card -->
+
+                        <div class="w3-col l6 w3-card w3-white w3-padding w3-margin-left w3-padding-16 w3-round" style="width: 42%;">
+                            <div class="w3-display-container ">
+                                <span>Customers</span>
+                                <i class="fa-solid fa-user w3-round w3-display-topright w3-pale-blue w3-text-blue w3-padding"></i>
+                            </div>
+                            <div>
+                                <span class="w3-xlarge w3-text-grey">3666</span>
+                            </div>
+                            <div>
+                                <br><span><i class="fa-solid fa-up-long w3-text-light-green">&nbsp;10%</i></span><br>
+                                <span>Since last month</span>
+                            </div>
+                        </div>
+
+                        <!-- Third Card -->
+
+                        <div class="w3-col l6 w3-card w3-white w3-padding w3-margin-left w3-margin-top w3-padding-16 w3-round" style="width: 42%;">
+                            <div class="w3-display-container ">
+                                <span>Customers</span>
+                                <i class="fa-solid fa-user w3-round w3-display-topright w3-pale-blue w3-text-blue w3-padding"></i>
+                            </div>
+                            <div>
+                                <span class="w3-xlarge w3-text-grey">3666</span>
+                            </div>
+                            <div>
+                                <br><span><i class="fa-solid fa-up-long w3-text-light-green">&nbsp;10%</i></span><br>
+                                <span>Since last month</span>
+                            </div>
+                        </div>
+
+                        <!-- Fourth Card -->
+
+                        <div class="w3-col l6 w3-card w3-white w3-padding w3-margin-left w3-margin-top w3-padding-16 w3-round" style="width: 42%;">
+                            <div class="w3-display-container ">
+                                <span>Customers</span>
+                                <i class="fa-solid fa-user w3-round w3-display-topright w3-pale-blue w3-text-blue w3-padding"></i>
+                            </div>
+                            <div>
+                                <span class="w3-xlarge w3-text-grey">3666</span>
+                            </div>
+                            <div>
+                                <br><span><i class="fa-solid fa-up-long w3-text-light-green">&nbsp;10%</i></span><br>
+                                <span>Since last month</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="w3-col l7">
+
+                </div>
+
+            </div>
+
+            <!-- second Row -->
+
+            <div class="dbd-sr">
+                <div class="dbd-fr-container w3-row">
+                    <div class="w3-col w3-white l3 s12 m4 w3-margin-left w" style="width: 22%;">
+                        <div class="w3-card w3-padding-24 w3-padding w3-round w3-border-left w3-leftbar w3-border-blue">
+                            <span class="w3-small w3-text-green">Earnings (Monthly)</span><br>
+                            <span class="w3-large">$10000</span>
+                        </div>
+                    </div>
+                    <div class="w3-col w3-white l3 s12 m4 w3-margin-left w" style="width: 22%;">
+                        <div class="w3-card w3-padding-24 w3-padding w3-round w3-border-left w3-leftbar w3-border-blue">
+                            <span class="w3-small w3-text-green">Earnings (Monthly)</span><br>
+                            <span class="w3-large">$10000</span>
+                        </div>
+                    </div>
+                    <div class="w3-col w3-white l3 s12 m4 w3-margin-left w" style="width: 22%;">
+                        <div class="w3-card w3-padding-24 w3-padding w3-round w3-border-left w3-leftbar w3-border-blue">
+                            <span class="w3-small w3-text-green">Earnings (Monthly)</span><br>
+                            <span class="w3-large">$10000</span>
+                        </div>
+                    </div>
+                    <div class="w3-col w3-white l3 s12 m4 w3-margin-left w" style="width: 22%;">
+                        <div class="w3-card w3-padding-24 w3-padding w3-round w3-border-left w3-leftbar w3-border-blue">
+                            <span class="w3-small w3-text-green">Earnings (Monthly)</span><br>
+                            <span class="w3-large">$10000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Row -->
+
+            <div class="dbd-tr w3-row w3-padding-48">
+                <div class="dbdsr-fg w3-col l6 s12 w3-card-4 w3-margin w3-round" style="width: 39vw;">
+                    <div class="w3-padding w3-border-bottom w3-pale-green">
+                        <span class="w3-animate-bottom">Earning Overview</span>
+                    </div>
+                    <div id="myPlot" style="width:100%;max-width:700px"></div>
+                    <div class="w3-row">
+                        <div class="w3-col l6 w3-card w3-margin w3-padding w3-padding-16 w3-round w3-amber w3-text-white" style="width: 40%;">
+                            <span>Some text</span><br>
+                            <span>Some text</span>
+                        </div>
+                        <div class="w3-col l6 w3-card w3-margin w3-padding w3-padding-16 w3-round w3-light-blue w3-text-white" style="width: 40%;">
+                            <span>Some text</span><br>
+                            <span>Some text</span>
+                        </div>
+                    </div>
+                    <div class="w3-row">
+                        <div class="w3-col l6 w3-card w3-margin w3-padding w3-round  w3-light-green w3-text-white" style="width: 40%;">
+                            <span>Some text</span><br>
+                            <span>Some text</span>
+                        </div>
+                        <div class="w3-col l6 w3-card w3-margin w3-padding w3-round w3-pale-red w3-text-white" style="width: 40%;">
+                            <span>Some text</span><br>
+                            <span>Some text</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="dbdsr-sg w3-col l6 s12 w3-card-4 w3-margin " style="width: 29vw;">
+                    <div class="w3-padding w3-border-bottom  w3-pale-green">
+                        <span class="w3-animate-bottom">Earning Overview</span>
+                    </div>
+                    <div id="myChart" style="width:100%;max-width:700px"></div>
+                    <div id="piechart" style="width:100%;max-width:700px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
